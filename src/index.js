@@ -80,7 +80,7 @@ var handlers = {
         // var reprompt = this.t('HELP_REPROMPT_FACTS');
         var reprompt = 'Reprompt 1.';
         // this.emit(':askWithCard', speechOutput, reprompt, this.t('SKILL_NAME'), randomFact)
-        this.emit(':ask', speechOutput, reprompt)
+        this.emit(':ask', speechOutput, reprompt);
     },
     'GetNewYearFactIntent': function () {
         //TODO your code here

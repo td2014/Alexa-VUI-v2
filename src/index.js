@@ -77,7 +77,8 @@ var handlers = {
         var prefixArr = this.t('GET_FACT_MESSAGE');
         var selectedPrefix = randomPhrase(prefixArr);
         var speechOutput = selectedPrefix + randomFact;
-        var reprompt = this.t('HELP_REPROMPT_FACTS');
+        // var reprompt = this.t('HELP_REPROMPT_FACTS');
+        var reprompt = 'Reprompt 1.';
         // this.emit(':askWithCard', speechOutput, reprompt, this.t('SKILL_NAME'), randomFact)
         this.emit(':ask', speechOutput, reprompt)
     },
@@ -102,7 +103,8 @@ var handlers = {
            var prefixArr = this.t('GET_FACT_MESSAGE');
            var selectedPrefix = randomPhrase(prefixArr);
            var speechOutput = selectedPrefix + yearBasedFact;
-           var reprompt = this.t('HELP_REPROMPT_FACTS');
+           // var reprompt = this.t('HELP_REPROMPT_FACTS');
+           var reprompt = 'Reprompt 2.';
            // this.emit(':askWithCard', speechOutput, reprompt, this.t('SKILL_NAME'), yearBasedFact);
            this.emit(':ask', speechOutput, reprompt);
         } else { 
@@ -110,7 +112,8 @@ var handlers = {
            var randomFact = randomPhrase(factArr);
            // Create speech output corresponding to this
            var speechOutput = this.t('GET_FACT_MESSAGE_YEAR_NOT_FOUND_RANDOM') + randomFact;
-           var reprompt = this.t('HELP_REPROMPT_FACTS');
+           // var reprompt = this.t('HELP_REPROMPT_FACTS');
+           var reprompt = 'Reprompt 3.';
            // this.emit(':askWithCard', speechOutput, reprompt, this.t('SKILL_NAME'), randomFact);
            this.emit(':ask', speechOutput, reprompt);
         }

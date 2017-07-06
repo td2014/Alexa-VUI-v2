@@ -78,9 +78,7 @@ var handlers = {
         var selectedPrefix = randomPhrase(prefixArr);
         var speechOutput = selectedPrefix + randomFact;
         // var reprompt = this.t('HELP_REPROMPT_FACTS');
-        var reprompt = 'Reprompt 1.';
-        // this.emit(':askWithCard', speechOutput, reprompt, this.t('SKILL_NAME'), randomFact)
-        this.emit(':ask', speechOutput, reprompt);
+        this.emit(':tellWithCard', speechOutput, this.t('SKILL_NAME'), randomFact)
     },
     'GetNewYearFactIntent': function () {
         //TODO your code here
@@ -104,18 +102,14 @@ var handlers = {
            var selectedPrefix = randomPhrase(prefixArr);
            var speechOutput = selectedPrefix + yearBasedFact;
            // var reprompt = this.t('HELP_REPROMPT_FACTS');
-           var reprompt = 'Reprompt 2.';
-           // this.emit(':askWithCard', speechOutput, reprompt, this.t('SKILL_NAME'), yearBasedFact);
-           this.emit(':ask', speechOutput, reprompt);
+           this.emit(':tellWithCard', speechOutput, this.t('SKILL_NAME'), yearBasedFact);
         } else { 
            // otherwise load random fact
            var randomFact = randomPhrase(factArr);
            // Create speech output corresponding to this
            var speechOutput = this.t('GET_FACT_MESSAGE_YEAR_NOT_FOUND_RANDOM') + randomFact;
            // var reprompt = this.t('HELP_REPROMPT_FACTS');
-           var reprompt = 'Reprompt 3.';
-           // this.emit(':askWithCard', speechOutput, reprompt, this.t('SKILL_NAME'), randomFact);
-           this.emit(':ask', speechOutput, reprompt);
+           this.emit(':tellWithCard', speechOutput, this.t('SKILL_NAME'), randomFact);
         }
     },
     'AMAZON.HelpIntent': function () {

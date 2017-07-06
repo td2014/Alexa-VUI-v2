@@ -1,0 +1,30 @@
+GetNewFactIntent a fact
+GetNewFactIntent tell me a fact
+GetNewFactIntent give me a fact
+GetNewFactIntent give me something
+GetNewFactIntent give me some info
+GetNewFactIntent give me something to chew on
+GetNewFactIntent surprise me
+GetNewFactIntent surprise me with a fact
+GetNewFactIntent hit me with a fact
+GetNewFactIntent i want to know a fact
+GetNewFactIntent i'd like to know a fact
+GetNewFactIntent i want to know some info
+GetNewFactIntent tell me something
+GetNewFactIntent i want to learn a fact
+GetNewFactIntent give me a historical fact
+GetNewYearFactIntent a fact for the year {FACT_YEAR}
+GetNewYearFactIntent tell me a fact for {FACT_YEAR}
+GetNewYearFactIntent give me a fact for {FACT_YEAR}
+GetNewYearFactIntent give me something in {FACT_YEAR}
+GetNewYearFactIntent give me some info about {FACT_YEAR}
+GetNewYearFactIntent give me something to chew on from {FACT_YEAR}
+GetNewYearFactIntent surprise me from the year {FACT_YEAR}
+GetNewYearFactIntent surprise me with a fact from {FACT_YEAR}
+GetNewYearFactIntent hit me with a fact from {FACT_YEAR}
+GetNewYearFactIntent i want to know a fact from {FACT_YEAR}
+GetNewYearFactIntent i'd like to know a fact from {FACT_YEAR}
+GetNewYearFactIntent i want to know some info from {FACT_YEAR}
+GetNewYearFactIntent tell me something from {FACT_YEAR}
+GetNewYearFactIntent i want to learn a fact from {FACT_YEAR}
+GetNewYearFactIntent give me a historical fact from {FACT_YEAR}

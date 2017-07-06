@@ -74,11 +74,12 @@ var handlers = {
 
         // Create speech output
         // Obtain list of fact prefix messages and randomly select one
-        var prefixArr = this.t("GET_FACT_MESSAGE");
+        var prefixArr = this.t('GET_FACT_MESSAGE');
         var selectedPrefix = randomPhrase(prefixArr);
         var speechOutput = selectedPrefix + randomFact;
-        var reprompt = this.t("HELP_REPROMPT_FACTS");
-        this.emit(':askWithCard', speechOutput, reprompt, this.t("SKILL_NAME"), randomFact)
+        var reprompt = this.t('HELP_REPROMPT_FACTS');
+        // this.emit(':askWithCard', speechOutput, reprompt, this.t('SKILL_NAME'), randomFact)
+        this.emit(':ask', speechOutput, reprompt)
     },
     'GetNewYearFactIntent': function () {
         //TODO your code here
@@ -98,18 +99,20 @@ var handlers = {
            // Choose a random fact from those that contain the requested year.
            var yearBasedFact = randomPhrase(yearBasedFactArr); 
            // Obtain list of fact prefix messages and randomly select one
-           var prefixArr = this.t("GET_FACT_MESSAGE");
+           var prefixArr = this.t('GET_FACT_MESSAGE');
            var selectedPrefix = randomPhrase(prefixArr);
            var speechOutput = selectedPrefix + yearBasedFact;
-           var reprompt = this.t("HELP_REPROMPT_FACTS");
-           this.emit(':askWithCard', speechOutput, reprompt, this.t("SKILL_NAME"), yearBasedFact);
+           var reprompt = this.t('HELP_REPROMPT_FACTS');
+           // this.emit(':askWithCard', speechOutput, reprompt, this.t('SKILL_NAME'), yearBasedFact);
+           this.emit(':ask', speechOutput, reprompt);
         } else { 
            // otherwise load random fact
            var randomFact = randomPhrase(factArr);
            // Create speech output corresponding to this
-           var speechOutput = this.t("GET_FACT_MESSAGE_YEAR_NOT_FOUND_RANDOM") + randomFact;
-           var reprompt = this.t("HELP_REPROMPT_FACTS");
-           this.emit(':askWithCard', speechOutput, reprompt, this.t("SKILL_NAME"), randomFact);
+           var speechOutput = this.t('GET_FACT_MESSAGE_YEAR_NOT_FOUND_RANDOM') + randomFact;
+           var reprompt = this.t('HELP_REPROMPT_FACTS');
+           // this.emit(':askWithCard', speechOutput, reprompt, this.t('SKILL_NAME'), randomFact);
+           this.emit(':ask', speechOutput, reprompt);
         }
     },
     'AMAZON.HelpIntent': function () {
